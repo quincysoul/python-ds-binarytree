@@ -1,5 +1,6 @@
 target = "./solutions/__test__"
 logging = True
 omit-patterns = *__init__*
-run-coverage = true
+run-coverage = True
 verbose = 3
+no-tracebacks = False

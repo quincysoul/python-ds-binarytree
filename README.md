@@ -1,24 +1,30 @@
-# leetcode-javascript
-Below are my solutions to leetcode. I will generally aim to solve them in JavaScript, though may explore Python as well. The filename will associate it.
+# Python Binary Tree Algorithms
+These are some BST algorithms designed to review BSTs.
 
-# Running js test suite
-```sh
-npm i
-npm test
+# Generating a BST for Test Cases
+```py
+# --------------------------------------------------
+# 1. To generate a random BST
+python
+import binarytree
+# binarytree.bst(height=3, is_perfect=False)
+bst = binarytree.bst()
+bst.values
+# 2. To generate a printout for reference
+bst.pprint(bst)
+# Copy the output value ex. [14, 13, None, 4, None, None, None, 2, 12]
+# In test case:
+import binarytree
+root = binarytree.build([14, 13, None, 4, None, None, None, 2, 12])
+
+# For more see https://binarytree.readthedocs.io/en/latest/specs.html#binarytree.bst
 ```
 ### Recommended VS Code Extensions
-* ESLint
+* `./settings.json` will provide recommended setup. Accept any installs requested to re-use.
 
-# Python3
+# Python3 Installation
 
 ## WSL with Ubuntu - Install `pyenv` and required items
-<!-- 1. `python3.7` is already installed on latest, and with `pip` and `pipenv` modules.
-```sh
-sudo apt update
-sudo apt install python3.7 python3-pip -y
-python3.7 -m pip install --user pip
-python3.7 -m pip install --user pipenv
-``` -->
 1. `pyenv` is installed on latest, and with `pip` and `pipenv` modules (different if not Ubuntu):
 ```sh
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -57,7 +63,7 @@ green
 ## Recommended zsh Extensions
 * [zsh-autoswitch-virtualenv](https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv)
 
-### `zsh-autoswitch-virtualenv` Required config for WSL
+### `zsh-autoswitch-virtualenv` Required config for WSL2
 1. Open wsl.conf within Ubuntu WSL
 ```sh
 sudo vim /etc/wsl.conf
